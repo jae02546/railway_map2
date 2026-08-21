@@ -27,7 +27,6 @@
     .app { height: 100%; display: grid; grid-template-columns: 340px 1fr; }
     .sidebar { z-index: 20; min-width: 0; min-height: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; background: var(--panel); border-right: 1px solid var(--line); box-shadow: 4px 0 24px rgba(27,42,35,.05); }
     .brand { padding: 24px 22px 18px; border-bottom: 1px solid var(--line); }
-    .eyebrow { margin: 0 0 5px; color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
     h1 { margin: 0; font-size: 22px; letter-spacing: -.03em; }
     .subtitle { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
     .search-wrap { padding: 16px 18px 10px; }
@@ -62,7 +61,7 @@
     #resetSelection { margin-top: 9px; padding: 7px 10px; border: 0; border-radius: 8px; color: var(--accent); background: var(--accent-soft); font-size: 12px; font-weight: 700; cursor: pointer; }
     .zoom-setting { margin-top: 12px; padding-top: 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); color: #46504b; font-size: 12px; font-weight: 700; cursor: pointer; }
     .zoom-setting input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); cursor: pointer; }
-    .sidebar-footer { padding: 0 18px 14px; text-align: right; }
+    .sidebar-footer { padding: 0 18px 14px; display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 11px; white-space: nowrap; }
     .version-link { color: var(--muted); font-size: 11px; text-decoration: none; }
     .version-link:hover, .version-link:focus-visible { color: var(--accent); text-decoration: underline; }
     .map-shell { position: relative; min-width: 0; overflow: hidden; }
@@ -115,7 +114,6 @@
     <aside class="sidebar" aria-label="鉄道事業者と路線">
       <button id="sidebarClose" aria-label="メニューを閉じる">×</button>
       <header class="brand">
-        <p class="eyebrow">Railway Atlas</p>
         <h1>鉄道路線マップ</h1>
         <p class="subtitle">実際の位置関係で鉄道路線を表示</p>
       </header>
@@ -136,7 +134,7 @@
           <input id="companyAutoZoom" type="checkbox" checked>
         </label>
       </section>
-      <footer class="sidebar-footer"><a class="version-link" href="version.html" target="_blank" rel="noopener noreferrer">バージョン情報</a></footer>
+      <footer class="sidebar-footer"><span>ver2.0.0 (c)2023-2026 jae02546</span><a class="version-link" href="readme.html" target="_blank" rel="noopener noreferrer">README</a></footer>
     </aside>
     <div class="backdrop" id="backdrop"></div>
     <main class="map-shell">
@@ -156,3 +154,4 @@
   <script src="railwayMap.js"></script>
 </body>
 </html>
+
